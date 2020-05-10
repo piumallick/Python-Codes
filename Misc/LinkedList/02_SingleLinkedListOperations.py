@@ -19,8 +19,8 @@ class linked_list:
         self.head = node()  # Defining constructor (Placeholder to allow the first pointer in the list)
         
     def append(self, data):
-        new_node = node(data)
         curr = self.head
+        new_node = node(data)
         while (curr.next != None):
             curr = curr.next
         curr.next = new_node
@@ -93,7 +93,7 @@ my_list.append(2)
 my_list.append(3)
 my_list.append(4)
 my_list.append(4)
-my_list.length()
+print(my_list.length())
 my_list.display()
 my_list.deleteDuplicates()
 my_list.display()
