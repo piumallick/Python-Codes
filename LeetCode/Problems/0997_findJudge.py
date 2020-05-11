@@ -71,13 +71,43 @@ def findJudge(N, trust):
         if (scores == (N - 1)):
             return i
     return -1
+
+#################################################
+    
+# Not working
+    '''
+import numpy as np
+
+def findJudge2(N, trust):
+    
+    trustArray = np.array(trust)
+    uniqueTrustArray = set(np.unique(trustArray))
+    #print(uniqueTrustArray)
+    
+    
+    trustingSet = set([col[0] for col in trust])
+    #uniqueTrustingSet = set(np.unique(trustingSet))
+    #print(trustingSet)
+    
+    setDiff = uniqueTrustArray.difference(trustingSet)
+    #print(setDiff)
+    
+    #print(list(setDiff)[0])
+    
+    #for e in setDiff:
+        #print(e)
    
-        
-            
+
+    if (len(setDiff) == 1):
+        return (list(setDiff)[0])
+    else:
+        return -1
+'''
+           
 # Testing
-trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
-N = 4
-print(findJudge(N, trust))
+#trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
+#N = 4
+#print(findJudge2(N, trust))
 
 trust1 = [[1,2],[2,3]]
 N1 = 3
