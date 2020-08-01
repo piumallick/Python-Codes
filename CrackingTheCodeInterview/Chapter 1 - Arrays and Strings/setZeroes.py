@@ -32,7 +32,6 @@ def nullifyRow(matrix, row):
 
 def nullifyColumn(matrix, column):
   for i in range(len(matrix)):
-    print(i, column)
     matrix[i][column] = 0
 
 # Testing
