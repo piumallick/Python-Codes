@@ -45,5 +45,19 @@ def majorityElement(nums):
     
             
 nums = [6,5,5]
-#nums = [1,2,3,4,5]
 print(majorityElement(nums))
+# Output: 5
+
+#############################################################################
+
+# Alternate solution
+
+def majorityElement(nums):
+        nums.sort()
+        return nums[len(nums) // 2]
+    
+
+nums = [2,2,1,1,1,2,2]
+print(majorityElement(nums))
+# Output: 2    
+    
